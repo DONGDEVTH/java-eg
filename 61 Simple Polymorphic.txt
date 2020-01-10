@@ -1,0 +1,48 @@
+class apples {
+    public static void main (String[] args){
+
+
+        Animal[] thelist = new Animal[2];  //CHANGE Animal[3]
+        Dog d = new Dog();
+        Fish f = new Fish();
+//        Animal a = new Animal();
+
+        thelist[0]=d;
+        thelist[1]=f;
+//        thelist[2]=a;
+
+        for(Animal x: thelist)
+            x.noise();
+
+    }
+}
+
+
+
+-----------------------------------
+public class Dog  extends Animal{
+
+    public void noise() {
+        System.out.println("Ruff");
+    }
+}
+
+----------------------------------
+public class Fish extends Animal {
+
+    public void noise() {
+        System.out.println("Glurp Slurp");
+
+    }
+}
+----------------------------------
+public class Animal {
+
+
+    public void noise(){
+        System.out.println("Animal dont amke noise");
+
+    }
+}
+
+

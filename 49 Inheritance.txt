@@ -1,0 +1,37 @@
+public class apples {
+    public  static void main (String[] atgs){
+        tuna tunaObject = new tuna();
+//        potpie potObject = new potpie();
+
+        tunaObject.eat();
+//        potObject.eat();
+    }
+}
+
+
+
+---------------------------------------
+public class tuna extends potpie{
+
+//    @Override
+//    public void eat() {
+//        System.out.println("I am the New method Of tuna");
+//    }
+}
+
+---------------------------------------
+public class potpie extends food{
+
+//    public void eat() {
+//        System.out.println("I am the eat method");
+//    }
+}
+
+---------------------------------------
+public class food {
+
+    private void eat() {
+        System.out.println("I am the eat method");
+    }
+}
+

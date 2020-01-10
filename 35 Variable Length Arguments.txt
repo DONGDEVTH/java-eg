@@ -1,0 +1,12 @@
+class apples {
+    public static void main (String[] args) {
+        System.out.println(average(43,56,78,8,5000));
+    }
+    public static int average(int...numbers){
+        int total=0;
+        for (int x:numbers)
+            total+=x;
+
+            return total/numbers.length;  //This is For Math calculator
+    }
+}

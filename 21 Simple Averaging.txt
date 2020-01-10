@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+class apples {
+    public static void main (String[] args) {
+        Scanner input = new Scanner(System.in);
+        float total = 0;
+        float grade ;
+        float average ;
+        float counter = 0;
+
+        while (counter < 10) {
+            grade = input.nextInt();
+            total = total + grade;
+            counter++;
+            }
+            average = total/10;
+        System.out.println("You average is "+ average);
+    }
+}

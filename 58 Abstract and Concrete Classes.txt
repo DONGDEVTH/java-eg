@@ -1,0 +1,46 @@
+class apples {
+    public static void main (String[] args){
+
+        fatty bucky = new fatty();
+        food fo = new food();
+        food po = new potpie();
+
+        bucky.digest(fo);
+        bucky.digest(po);
+
+    }
+}
+--------------------------------------------
+
+public class potpie extends food {
+
+   public void eat (){
+        System.out.println("this potpie is great");
+
+    }
+}
+
+--------------------------------------------
+public class tuna extends food {
+
+   public void eat (){
+        System.out.println("this tuna is great");
+
+    }
+}
+---------------------------------------------
+abstract public class food {
+
+    public abstract void eat();
+
+}
+--------------------------------------------
+public class fatty {
+
+    public void digest (food x){
+        x.eat();
+
+
+    }
+
+}

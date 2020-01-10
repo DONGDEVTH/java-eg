@@ -1,0 +1,89 @@
+GUI
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+
+public class Gui extends JFrame {
+        private String details;
+        private JLabel statusbar;
+        
+        public Gui(){
+            super("tutle");
+            
+            statusbar = new JLabel ("this is defualt");
+            add(statusbar, BorderLayout.SOUTH);
+            addMouseListener(new Mouseclass());
+            
+        }
+        private class Mouseclass extends MouseAdapter{
+            public void mouseClicked(MouseEvent event){
+                details = String.format("You Clicked %d",event.getClickCount);
+                
+                if (event.isMetaDown())
+                    details += "with right nouse button";
+                else if(event.isAltDown())
+                    details += "with center mouse button";
+                else
+                    details += "With left mouse button";
+                statusbar.setText(details);
+                
+            }
+        }
+}
+
+----------------------------------
+aPPLES
+apples
+	
+import javax.swing.JFrame;
+
+class apples {
+    public static void main (String[] args) {
+
+        Gui go = new Gui();
+        go.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        go.setSize(300,200);
+        go.setVisible(true);
+    }
+
+}
+
+
+
+------------------
+version 2 grammar
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+
+public class Gui extends JFrame {
+        private String details;
+        private JLabel statusbar;
+        
+        public Gui(){
+            super("tutle");
+            
+            statusbar = new JLabel ("this is defualt");
+            add(statusbar, BorderLayout.SOUTH);
+            addMouseListener(new Mouseclass());
+            
+        }
+        private class Mouseclass extends MouseAdapter{
+            public void mouseClicked(MouseEvent event){
+                details = String.format("You Clicked %d %s with",event.getClickCount(),(event.getClickCount()!=1)?"times":"time");
+                
+                if(event.isMetaDown())
+                    details += "with right Mouse button";
+                else if(event.isAltDown())
+                    details += "with center mouse button";
+                else
+                    details += "With left mouse button";
+                statusbar.setText(details);
+                
+            }
+        }
+}

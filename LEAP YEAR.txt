@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class LeapYear {
+	public static void main (String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("ปีพ.ศ.ที่ต้องการเช็ค >> ");
+		int year = scan.nextInt() ;
+		System.out.print("ปี พ.ศ. " + year);
+		year -= 543;
+		
+		if ((year % 400 ==0)||((year % 100 !=0)&&(year % 4 ==0))) {
+			System.out.printIn("เป็นปี leap Year");
+		} else {
+			System.out.printIn("ไม่เป็นปี Leap Year");
+		}
+		scan.close();
+	}
+}

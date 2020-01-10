@@ -1,0 +1,40 @@
+class apples {
+
+    public static void main(String[] args) {
+
+        DogList DLO = new DogList();            //Register DogList = DLO
+        Dog d = new Dog();                      // Register Dog = d
+        DLO.add(d);                             // Call DLO> DogList > add() > d
+
+    }
+}
+
+
+--------------------------------------
+
+public class Dog extends Animal {
+}
+
+
+--------------------------------------
+public class Fish extends Animal {
+}
+
+---------------------------------
+public class Animal {
+}
+
+-------------------------------
+public class DogList {
+    private Dog[] thelist = new Dog[5];   //Register Dog[]
+    private int i=0;                     //Register i
+
+    public void add(Dog d){               //Method add( )
+        if(i<thelist.length){
+            thelist[i] = d ;
+            System.out.println("Dog added at index "+i);
+            i++;
+        }
+    }
+
+}

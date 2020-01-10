@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ExtractDigit {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner (System.in);
+        System.out.print("กรุณาใส่ตัวเลข >> ");
+        int n = scan.nextInt();
+        int d, remain = n;
+        String str = "";
+
+        do {
+            d = remain % 10;
+            str += d + "\n";
+            remain = (int) (remain / 10);
+        } while(remain !=0);
+        System.out.println ("ตัวเลขที่แยกได้คือ\n" +str);
+        scan.close();
+    }
+}

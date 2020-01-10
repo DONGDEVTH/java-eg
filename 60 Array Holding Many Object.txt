@@ -1,0 +1,48 @@
+class apples {
+
+    public static void main(String[] args) {
+
+    AnimalList ALO = new AnimalList();
+    dog d = new dog();                          //reference to dog extend animal
+    Fish f = new Fish () ;
+    ALO.add(d);
+    ALO.add(f);
+        ALO.add(d);
+        ALO.add(f);
+    }
+}
+---------------------------
+public class dog extends Animal {
+
+
+}
+
+
+
+----------------------------
+public class Fish extends Animal {
+
+
+}
+
+-----------------------------
+public class Animal {
+
+
+
+}
+-------------------------
+public class AnimalList {
+
+    private Animal[] thelist = new Animal[5];
+    private int i = 0;
+
+    public void add(Animal a){
+        if(i<thelist.length){
+            thelist[i]=a;
+            System.out.println("Animal added at index "+i);
+            i++;
+        }
+    }
+
+}

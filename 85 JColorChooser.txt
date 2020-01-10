@@ -1,0 +1,48 @@
+import javax.swing.*;
+
+public class dong {
+    public static void main (String[] args){
+
+        Peach p = new Peach();
+        p.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+}
+
+----------------------------------------
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+
+
+public class Peach extends JFrame {
+
+    private JButton b;
+    private Color color = (Color.WHITE);
+    private JPanel panel;
+
+    public Peach(){
+        super("Hello wrold");
+        panel = new JPanel();
+        panel.setBackground(color);
+
+        b=new JButton("Chose a color");
+        b.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent event) {
+                        color = JColorChooser.showDialog(null, "Pick you color",color);
+                                if(color==null)
+                                    color=(Color.WHITE);
+                        panel.setBackground(color);
+
+                    }
+                }
+        );
+        add(panel,BorderLayout.CENTER);
+        add(b, BorderLayout.SOUTH);
+        setSize(425,150);
+        setVisible(true);
+    }
+}
